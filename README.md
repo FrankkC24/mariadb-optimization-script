@@ -15,12 +15,6 @@ The script:
 
 Note: For InnoDB tables, `OPTIMIZE TABLE` is translated into a table recreation, which can take time for large tables.
 
-## Requirements
-
-- Bash shell
-- MariaDB client installed on the system
-- User with sufficient privileges to run the script (`SELECT` and `OPTIMIZE` permissions)
-
 ## Installation
 
 1. Clone this repository:
@@ -49,12 +43,6 @@ Note: For InnoDB tables, `OPTIMIZE TABLE` is translated into a table recreation,
     ```
 
 The script will iterate through all databases and tables, applying the `OPTIMIZE TABLE` command where applicable.
-
-## Important Notes
-
-- **Backup:** Always create a full backup of your databases before running optimization scripts.
-- **Execution Time:** Depending on the size and number of tables, the script might take a while to complete.
-- **Locking:** Some tables may be locked during the optimization process, so it's recommended to run this script during off-peak hours.
 
 ## Troubleshooting
 
